@@ -1,4 +1,4 @@
-name = "App-Release"
+name = "App-Project"
 # badges = ["travis"]
 module_maker="ModuleBuildTiny"
 

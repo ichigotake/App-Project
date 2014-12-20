@@ -1,4 +1,4 @@
-package App::Release;
+package App::Project;
 use 5.008001;
 use strict;
 use warnings;
@@ -18,7 +18,7 @@ __END__
 
 =head1 NAME
 
-App::Release - [DRAFT] Generic authoring tool(not only for perl project).
+App::Project - [DRAFT] Generic authoring tool(not only for perl project).
 
 =head1 SYNOPSIS
 
@@ -39,11 +39,11 @@ B<If you know a cool generic authoring tool, Please contact me!>
 
 =head1 DESCRIPTION
 
-App::Release is a application authoring tool. App::Release provides I<project> command as authoring tool for application project.
+App::Project is a application authoring tool. App::Project provides I<project> command as authoring tool for application project.
 
-App::Release is not only for Perl project.
+App::Project is not only for Perl project.
 
-App::Release inspire of Minilla(as CPAN module auhtoring tool).
+App::Project inspire of Minilla(as CPAN module auhtoring tool).
 
 B<THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE>.
 
@@ -51,8 +51,8 @@ B<THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE>.
 
     # First time only
     # TODO: Provide fat pack tool
-    % cpanm App::Release
-    # App::Release has only a few deps. It should be very quick
+    % cpanm App::Project
+    # App::Project has only a few deps. It should be very quick
     # Make a new distribution
     % cd /path/to/App/
     % project migrate
@@ -83,9 +83,9 @@ Perl script is high portability, A lot of operation system is installed Perl.
 
 Make simple script with comparative ease. I don't have plan to be complex interfaces ;)
 
-=head2 App::Release is built on small libraries.
+=head2 App::Project is built on small libraries.
 
-App::Release is built on only few small libraries. You can install App::Release without a huge list of dependencies to heavy modules.
+App::Project is built on only few small libraries. You can install App::Project without a huge list of dependencies to heavy modules.
 
 And dependencies are pure perl or perl core(5.8.8+) only, because to higher portability for I<wrapper> script.
 

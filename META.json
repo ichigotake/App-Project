@@ -1,5 +1,5 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "[DRAFT] Generic authoring tool(not only for perl project).",
    "author" : [
       "ichigotake <ichigotake.san@gmail.com>"
    ],
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "App-Release",
+   "name" : "App-Project",
    "no_index" : {
       "directory" : [
          "t",
@@ -52,5 +52,16 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ichigotake/App-Project/issues"
+      },
+      "homepage" : "https://github.com/ichigotake/App-Project",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ichigotake/App-Project.git",
+         "web" : "https://github.com/ichigotake/App-Project"
+      }
+   },
+   "version" : "v0.0.0"
 }
