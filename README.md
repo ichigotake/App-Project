@@ -21,7 +21,7 @@ __If you know a cool generic authoring tool, Please contact me!__
 
 # DESCRIPTION
 
-App::Release is a application authoring tool. App::Release provides _project_ command for authoring a application project.
+App::Release is a application authoring tool. App::Release provides _project_ command as authoring tool for application project.
 
 App::Release is not only for Perl project.
 
