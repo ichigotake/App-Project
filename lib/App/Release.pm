@@ -39,7 +39,7 @@ B<If you know a cool generic authoring tool, Please contact me!>
 
 =head1 DESCRIPTION
 
-App::Release is a application authring tool. App::Release provides L<project> command for authoring a application project.
+App::Release is a application authoring tool. App::Release provides I<project> command for authoring a application project.
 
 App::Release is not only for Perl project.
 
