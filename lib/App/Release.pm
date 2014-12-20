@@ -22,12 +22,10 @@ App::Release - [DRAFT] Generic authoring tool(not only for perl project).
 
 =head1 SYNOPSIS
 
-    project build   - Build your project
     project changes - Ready to change log for release
     project dist    - Make your dist tarball
     project migrate - Set up your project ready for this tool
     project release - Ready to release your project
-    project test    - Run testing on your project
     project version - Bump version with interactive interface
     project wrapper - Install this command line tool in your project
 
