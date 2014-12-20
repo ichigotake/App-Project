@@ -46,7 +46,7 @@ __THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE__.
     # Make L<git tag> and update change log for release
     % project release
     # Need more portability tool? We provide to generate L<>
-    % project wrapper > bin/script.sh
+    % project wrapper > bin/project
 
 
 
