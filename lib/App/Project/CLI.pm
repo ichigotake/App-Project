@@ -31,6 +31,12 @@ sub run {
                 args => 'version',
                 desc => 'bump next version',
             },
+            untracks => {
+                options => [
+                    [ [qw/z/], "\0 line termination on output", "!", undef, { default => 0 } ],
+                ],
+                desc => 'Show untracked files',
+            },
         },
     );
 
