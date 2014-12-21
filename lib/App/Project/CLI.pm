@@ -31,6 +31,13 @@ sub run {
                 args => 'version',
                 desc => 'bump next version',
             },
+            changes => {
+                options => [
+                    [ [qw/c check/], 'Check can edit Changes', '!', undef, {default => 0} ],
+                ],
+                args => 'version',
+                desc => 'Edit and commit Changes',
+            },
             untracks => {
                 options => [
                     [ [qw/z/], "\0 line termination on output", "!", undef, { default => 0 } ],

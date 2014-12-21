@@ -22,7 +22,7 @@ App::Project - [DRAFT] Generic authoring tool(not only for perl project).
 
 =head1 SYNOPSIS
 
-    project changes      - (not yet) Ready to change log for release
+    project changes      - Ready to change log for release
     project untracks     - Show untracked files
     project dist         - (not yet) Make your dist tarball
     project migrate      - (not yet) Set up your project ready for this tool
