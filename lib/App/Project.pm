@@ -26,7 +26,7 @@ App::Project - [DRAFT] Generic authoring tool(not only for perl project).
     project untracks     - Show untracked files
     project dist         - (not yet) Make your dist tarball
     project migrate      - (not yet) Set up your project ready for this tool
-    project release      - (not yet) Ready to release your project
+    project release      - Make release tag and push
     project bump_version - Bump version for next release
     project wrapper      - (not yet) Install this command line tool in your project
 

@@ -38,6 +38,10 @@ sub run {
                 args => 'version',
                 desc => 'Edit and commit Changes',
             },
+            release => {
+                args => 'version',
+                desc => 'Make release tag and push',
+            },
             untracks => {
                 options => [
                     [ [qw/z/], "\0 line termination on output", "!", undef, { default => 0 } ],
