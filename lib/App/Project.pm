@@ -97,7 +97,7 @@ Make simple script with comparative ease. I don't have plan to be complex interf
 
 App::Project is built on only few small libraries. You can install App::Project without a huge list of dependencies to heavy modules.
 
-And dependencies are pure perl or perl core(5.8.8+) only, because to higher portability for I<wrapper> script.
+And dependencies are pure perl or perl core(5.12.0+) only, because to higher portability for I<wrapper> script.
 
 =head1 LICENSE
 
