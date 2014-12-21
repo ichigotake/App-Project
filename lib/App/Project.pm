@@ -22,12 +22,12 @@ App::Project - [DRAFT] Generic authoring tool(not only for perl project).
 
 =head1 SYNOPSIS
 
-    project changes - Ready to change log for release
-    project dist    - Make your dist tarball
-    project migrate - Set up your project ready for this tool
-    project release - Ready to release your project
-    project version - Bump version with interactive interface
-    project wrapper - Install this command line tool in your project
+    project changes      - (not yet) Ready to change log for release
+    project dist         - (not yet) Make your dist tarball
+    project migrate      - (not yet) Set up your project ready for this tool
+    project release      - (not yet) Ready to release your project
+    project bump_version - Bump version for next release
+    project wrapper      - (not yet) Install this command line tool in your project
 
 =head1 THIS IS DRAFT AND I HAVE QUESTION
 
