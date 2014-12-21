@@ -41,13 +41,11 @@ App::Project - [DRAFT] Generic authoring tool(not only for perl project).
     project bump_version - Bump version for next release
     project wrapper      - (not yet) Install this command line tool in your project
 
-=head1 THIS IS DRAFT AND I HAVE QUESTION
+=head1 THIS IS DRAFT
 
 I'm going to implements this modules.
 
 And thinking about this name because L<App::Project> naming is uncool name :(
-
-B<If you know a cool generic authoring tool, Please contact me!>
 
 =head1 DESCRIPTION
 

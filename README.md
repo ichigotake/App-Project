@@ -13,13 +13,11 @@ App::Project - \[DRAFT\] Generic authoring tool(not only for perl project).
     project bump_version - Bump version for next release
     project wrapper      - (not yet) Install this command line tool in your project
 
-# THIS IS DRAFT AND I HAVE QUESTION
+# THIS IS DRAFT
 
 I'm going to implements this modules.
 
 And thinking about this name because [App::Project](http://search.cpan.org/perldoc?App::Project) naming is uncool name :(
-
-__If you know a cool generic authoring tool, Please contact me!__
 
 # DESCRIPTION
 
