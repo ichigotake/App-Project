@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/ichigotake/App-Project.svg?branch=master)](https://travis-ci.org/ichigotake/App-Project)
 # NAME
 
 App::Project - \[DRAFT\] Generic authoring tool(not only for perl project).
