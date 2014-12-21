@@ -5,6 +5,7 @@
 /blib
 /Makefile
 
+/cpanfile.snapshot
 /carton.lock
 /.carton/
 /local/
@@ -28,3 +29,8 @@ cover_db/
 MYMETA.*
 
 /App-Project-*
+
+/fatlib/
+/fatpacker.trace
+/packlists
+

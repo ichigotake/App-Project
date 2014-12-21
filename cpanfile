@@ -6,6 +6,11 @@ requires 'Term::ANSIColor';
 requires 'Try::Tiny';
 recommends 'Win32::Console::ANSI';
 
+on 'develop' => sub {
+    requires 'App::FatPacker';
+    requires 'Perl::Strip';
+};
+
 on 'test' => sub {
     requires 'File::pushd';
     requires 'File::Temp';
