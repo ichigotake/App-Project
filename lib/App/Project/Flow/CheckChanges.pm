@@ -1,4 +1,4 @@
-package App::Project::CheckChanges;
+package App::Project::Flow::CheckChanges;
 use strict;
 use warnings;
 use utf8;
@@ -13,8 +13,8 @@ sub new {
 }
 
 sub run {
-    my ($self, $version) = @_;
-    $version or die 'Must specifies version name!';
+    my ($self, $project, $opts) = @_;
+    $project->version or die 'Must specifies version name!';
 
     if ($ENV{PERL_APP_PROJECT_CHECK_CHANGE_LOG}) {
         infof("Okay, you are debugging now.\n");
@@ -22,7 +22,7 @@ sub run {
     }
 
     until (slurp('Changes') =~ /^\{\{\$NEXT\}\}\n+[ \t]+\S/m) {
-        infof("No mention of version '%s' in changelog file 'Changes'\n", $version);
+        infof("No mention of version '%s' in changelog file 'Changes'\n", $project->version);
         if (prompt("Edit file?", 'y') =~ /y/i) {
             edit_file('Changes');
         } else {

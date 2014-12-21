@@ -19,7 +19,7 @@ sub run {
     
     local @ARGV = @args;
     my @commands;
-    my $p = Getopt::Compact::WithCmd->new(
+    my $go = Getopt::Compact::WithCmd->new(
         name => 'App::Project',
         version => '0.1',
         global_struct => [],
@@ -34,11 +34,15 @@ sub run {
             changes => {
                 options => [
                     [ [qw/c check/], 'Check can edit Changes', '!', undef, {default => 0} ],
+                    [ [qw/d dry-run/], 'Dry run mode', '!', undef, { default => 0 } ],
                 ],
                 args => 'version',
                 desc => 'Edit and commit Changes',
             },
             release => {
+                options => [
+                    [ [qw/d dry-run/], 'Dry run mode', '!', undef, { default => 0 } ],
+                ],
                 args => 'version',
                 desc => 'Make release tag and push',
             },
@@ -51,9 +55,9 @@ sub run {
         },
     );
 
-    my $cmd = $p->command || 'help';
+    my $cmd = $go->command || 'help';
     if ($cmd eq 'help') {
-        $p->show_usage;
+        $go->show_usage;
         exit;
     }
     my $klass = sprintf("App::Project::CLI::%s", camelize($cmd));
@@ -61,7 +65,7 @@ sub run {
     ## no critic
     if (eval sprintf("require %s; 1;", $klass)) {
         try {
-            $klass->run($cmd, $p->args, $p->opts);
+            $klass->run($go);
         } catch {
             /App::Project::Error::CommandExit/ and return;
             errorf("%s\n", $_);

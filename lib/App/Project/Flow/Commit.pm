@@ -1,9 +1,9 @@
-package App::Project::ReleaseCommit;
+package App::Project::Flow::Commit;
 use strict;
 use warnings;
 use utf8;
 
-use App::Project::Util qw(find_file cmd);
+use App::Project::Util qw(cmd);
 use App::Project::Logger;
 
 sub new {
@@ -12,12 +12,14 @@ sub new {
 }
 
 sub run {
-    my ($self, $version, $opts) = @_;
+    my ($self, $project, $opts) = @_;
 
     my @modified_files = split /\0/, `git ls-files --deleted --modified -z`;
     return if @modified_files == 0;
 
-    my $msg = "Checking in changes prior to tagging of version $version.\n\nChangelog diff is:\n\n";
+    my $ver = $project->version;
+
+    my $msg = "Checking in changes prior to tagging of version $ver.\n\nChangelog diff is:\n\n";
     $msg .= `git diff Changes`;
 
     if ($opts->{dry_run}) {

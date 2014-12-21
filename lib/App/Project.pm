@@ -4,12 +4,23 @@ use strict;
 use warnings;
 use version; our $VERSION = version->declare("v0.0.0");
 
+use Time::Piece qw(gmtime);
+
 our $DEBUG;
 
 sub debug { $DEBUG }
 
+sub new {
+    my ($class, @args) = @_;
+    my $self = bless {@args}, $class;
+    $self->{version} // die 'Must specifies version!';
+    $self->{changes_time} = scalar(gmtime());
+    return $self;
+}
 
+sub version { return shift->{version}; }
 
+sub changes_time { return shift->{changes_time}; }
 
 1;
 __END__

@@ -2,22 +2,21 @@ package App::Project::CLI::Changes;
 use strict;
 use warnings;
 use utf8;
-use ExtUtils::MakeMaker qw(prompt);
 
-use App::Project::Util qw(edit_file slurp);
+use App::Project;
+use App::Project::Flow::CheckChanges;
+use App::Project::Flow::RewriteChanges;
 use App::Project::Logger;
-use App::Project::CheckChanges;
-use App::Project::ReleaseCommit;
-use App::Project::RewriteChanges;
 
 sub run {
     my ($self, $go) = @_;
     my $version = shift(@{$go->args}) or die 'Must specifies version name!';
-    App::Project::CheckChanges->new()->run($version);
+    my $project = App::Project->new(version => $version);
+    App::Project::Flow::CheckChanges->new()->run($project, $go->opts);
     if ($go->opts->{check} || undef) {
         return;
     }
-    App::Project::RewriteChanges->new()->run($version);
+    App::Project::Flow::RewriteChanges->new()->run($project, $go->opts);
 
 }
 
