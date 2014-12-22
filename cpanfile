@@ -3,6 +3,7 @@ requires 'Exporter';
 requires 'Getopt::Compact::WithCmd';
 requires 'Version::Next';
 requires 'Term::ANSIColor';
+requires 'Text::Table';
 requires 'Try::Tiny';
 recommends 'Win32::Console::ANSI';
 
