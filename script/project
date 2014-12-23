@@ -3,5 +3,8 @@ use strict;
 use warnings;
 use App::Project::CLI;
 
+use Text::Table;
+use Version::Next;
+
 App::Project::CLI->new()->run(@ARGV);
 

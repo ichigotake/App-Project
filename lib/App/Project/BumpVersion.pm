@@ -13,9 +13,9 @@ sub new {
 }
 
 sub run {
-    my ($self, $current_version, $opts) = @_;
-    my $validate = $opts->{validate} || 0;
-    $current_version //= '0.1';
+    my ($self, $go) = @_;
+    my $validate = $go->opts->{validate} || 0;
+    my $current_version = shift(@{$go->args}) // '0.1';
 
     my $is_valid = version::is_lax($current_version);
     if ($validate) {
