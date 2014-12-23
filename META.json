@@ -50,6 +50,7 @@
             "Exporter" : "0",
             "Getopt::Compact::WithCmd" : "0",
             "Term::ANSIColor" : "0",
+            "Text::Table" : "0",
             "Try::Tiny" : "0",
             "Version::Next" : "0",
             "perl" : "5.008001"
@@ -76,5 +77,8 @@
          "web" : "https://github.com/ichigotake/App-Project"
       }
    },
-   "version" : "v0.0.0"
+   "version" : "v0.0.0",
+   "x_contributors" : [
+      "Takayuki Otake <otake@studyplus.jp>"
+   ]
 }

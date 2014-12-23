@@ -5,11 +5,13 @@ App::Project - \[DRAFT\] Generic authoring tool(not only for perl project).
 
 # THIS PROJECT IS DEAD
 
-\*\*I don't continuous this project.\*\*
+__I don't continuous this project.__
 
 Some one advise to me, He said If you may need high portability generic CLI tool, write as Go lang is better.
 
 I will port to Go lang because App::Project goal is high portability generic authoring tool.
+
+Thank you all :)
 
 # SYNOPSIS
 
