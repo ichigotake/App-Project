@@ -4,8 +4,7 @@ use warnings;
 use utf8;
 use App::Project::CLI;
 
-# For fatpack
-use Text::Table;
+# For fat-packer
 use Version::Next;
 
 App::Project::CLI->new()->run(@ARGV);

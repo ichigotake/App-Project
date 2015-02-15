@@ -7,8 +7,9 @@ use App::Project::BumpVersion;
 my $bump = App::Project::BumpVersion->new();
 
 is($bump->run("1.2"), "1.2");
-ok($bump->run("1.2", {validate => 1}));
-ok(!$bump->run("1/2", {validate => 1}));
+ok($bump->run("1/2"), "0.1");
+ok($bump->run("1.2", {"--validate" => 1}));
+ok($bump->run("1/2", {"--validate" => 1}), "");
 
 my $guard = pushd(tempdir());
 

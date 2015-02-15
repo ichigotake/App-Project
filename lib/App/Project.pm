@@ -31,16 +31,6 @@ __END__
 
 App::Project - [DRAFT] Generic authoring tool(not only for perl project).
 
-=head1 THIS PROJECT IS DEAD
-
-B<I don't continuous this project.>
-
-Some one advise to me, He said If you may need high portability generic CLI tool, write as Go lang is better.
-
-I will port to Go lang because App::Project goal is high portability generic authoring tool.
-
-Thank you all :)
-
 =head1 SYNOPSIS
 
     project changes      - Ready to change log for release
@@ -49,7 +39,7 @@ Thank you all :)
     project migrate      - (not yet) Set up your project ready for this tool
     project release      - Make release tag and push
     project bump_version - Bump version for next release
-    project wrapper      - (not yet) Install this command line tool in your project
+    project wrapper      - (not yet) Output raw script source to stdout
 
 =head1 THIS IS DRAFT
 

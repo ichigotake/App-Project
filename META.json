@@ -43,15 +43,11 @@
          }
       },
       "runtime" : {
-         "recommends" : {
-            "Win32::Console::ANSI" : "0"
-         },
          "requires" : {
             "Exporter" : "0",
-            "Getopt::Compact::WithCmd" : "0",
+            "Getopt::Long" : "0",
+            "Module::Load" : "0",
             "Term::ANSIColor" : "0",
-            "Text::Table" : "0",
-            "Try::Tiny" : "0",
             "Version::Next" : "0",
             "perl" : "5.008001"
          }
@@ -79,6 +75,7 @@
    },
    "version" : "v0.0.0",
    "x_contributors" : [
-      "Takayuki Otake <otake@studyplus.jp>"
+      "Takayuki Otake <otake@studyplus.jp>",
+      "ichigotake <k.wisiiy@gmail.com>"
    ]
 }

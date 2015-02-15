@@ -22,7 +22,7 @@ sub run {
     my $msg = "Checking in changes prior to tagging of version $ver.\n\nChangelog diff is:\n\n";
     $msg .= `git diff Changes`;
 
-    if ($opts->{dry_run}) {
+    if ($opts->{dry_run} // undef) {
         infof("DRY-RUN.  Would have committed message of:\n----------------\n$msg\n-----------\n");
         return;
     }

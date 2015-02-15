@@ -3,8 +3,7 @@ use strict;
 use warnings;
 use utf8;
 use Getopt::Long;
-use Getopt::Compact::WithCmd;
-use Try::Tiny;
+use Module::Load;
 use App::Project::Errors;
 use App::Project::Logger;
 use App::Project::Util;
@@ -16,68 +15,23 @@ sub new {
 
 sub run {
     my ($self, @args) = @_;
+    my $cmd_name = shift @args;
+    if (!$cmd_name) {
+        $self->show_usage();
+        return;
+    }
     
     local @ARGV = @args;
-    my @commands;
-    my $go = Getopt::Compact::WithCmd->new(
-        name => 'App::Project',
-        version => '0.1',
-        global_struct => [],
-        command_struct => {
-            bump_version => {
-                options => [
-                    [ [qw/v validate/], 'validate version format', '!', undef, { default => 0 } ],
-                ],
-                args => 'version',
-                desc => 'bump next version',
-            },
-            changes => {
-                options => [
-                    [ [qw/c check/], 'Check can edit Changes', '!', undef, {default => 0} ],
-                    [ [qw/d dry-run/], 'Dry run mode', '!', undef, { default => 0 } ],
-                ],
-                args => 'version',
-                desc => 'Edit and commit Changes',
-            },
-            release => {
-                options => [
-                    [ [qw/d dry-run/], 'Dry run mode', '!', undef, { default => 0 } ],
-                ],
-                args => 'version',
-                desc => 'Make release tag and push',
-            },
-            untracks => {
-                options => [
-                    [ [qw/z/], "\0 line termination on output", "!", undef, { default => 0 } ],
-                ],
-                desc => 'Show untracked files',
-            },
-        },
-    );
-
-    my $cmd = $go->command || 'help';
-    if ($cmd eq 'help') {
-        $go->show_usage;
-        exit;
+    my $cmd = $self->load_sub_cmd($cmd_name);
+    if (!$cmd) {
+        $self->show_usage();
+        return;
     }
-    my $klass = sprintf("App::Project::CLI::%s", camelize($cmd));
+    $cmd->run(@args);
+}
 
-    ## no critic
-    if (eval sprintf("require %s; 1;", $klass)) {
-        try {
-            $klass->run($go);
-        } catch {
-            /App::Project::Error::CommandExit/ and return;
-            errorf("%s\n", $_);
-            exit 1;
-        }
-    } else {
-        warnf("Could not find command '%s'\n", $cmd);
-        if ($@ !~ /^Can't locate App::Project/) {
-            errorf("$@\n");
-        }
-        exit 2;
-    }
+sub show_usage {
+    print "TBD: show usage\n";
 }
 
 1;

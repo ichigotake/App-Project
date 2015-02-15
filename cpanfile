@@ -1,11 +1,10 @@
 requires 'perl', '5.008001';
 requires 'Exporter';
-requires 'Getopt::Compact::WithCmd';
-requires 'Version::Next';
+requires 'File::Basename';
+requires 'Getopt::Long';
+requires 'Module::Load';
 requires 'Term::ANSIColor';
-requires 'Text::Table';
-requires 'Try::Tiny';
-recommends 'Win32::Console::ANSI';
+requires 'Version::Next';
 
 on 'develop' => sub {
     requires 'App::FatPacker';

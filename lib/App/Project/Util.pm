@@ -6,8 +6,10 @@ use parent qw(Exporter);
 
 use App::Project::Logger;
 use Cwd();
+use File::Basename qw(basename);
+use Module::Load;
 
-our @EXPORT = qw(camelize cmd edit_file slurp slurp_raw spew_raw);
+our @EXPORT = qw(camelize cmd edit_file load_sub_cmd slurp slurp_raw spew_raw);
 
 sub camelize {
     my ($target) = @_;
@@ -16,7 +18,7 @@ sub camelize {
 }
 
 sub cmd {
-    App::Project::Logger::infof("[%s] \$ %s\n", File::Basename::basename(Cwd::getcwd()), "@_");
+    App::Project::Logger::infof("[%s] \$ %s\n", basename(Cwd::getcwd()), "@_");
     system(@_) == 0
         or App::Project::Logger::errorf("Giving up.\n");
 }
@@ -25,6 +27,13 @@ sub edit_file {
     my ($file) = @_;
     my $editor = $ENV{"EDITOR"} || "vi";
     system( $editor, $file );
+}
+
+sub load_sub_cmd {
+    my ($self, $name) = @_;
+    my $klass = sprintf("App::Project::CLI::%s", camelize($name));
+    load $klass;
+    return $klass;
 }
 
 sub slurp {
