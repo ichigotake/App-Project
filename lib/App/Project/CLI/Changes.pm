@@ -13,7 +13,7 @@ sub run {
     my ($self, @args) = @_;
     local @ARGV = @args;
     my $dry_run;
-    GetOptions("--dry-run!" => $dry_run);
+    GetOptions("dry-run!" => $dry_run);
     my $version = shift(@args) or die 'Must specifies version name!';
     my $project = App::Project->new(version => $version);
     App::Project::Flow::CheckChanges->new()->run($project, \@args);
