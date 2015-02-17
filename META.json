@@ -45,6 +45,7 @@
       "runtime" : {
          "requires" : {
             "Exporter" : "0",
+            "File::Basename" : "0",
             "Getopt::Long" : "0",
             "Module::Load" : "0",
             "Term::ANSIColor" : "0",
