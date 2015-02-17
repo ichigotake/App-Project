@@ -12,9 +12,11 @@ on 'develop' => sub {
 };
 
 on 'test' => sub {
+    requires 'Parse::CPAN::Meta', '1.4414';
     requires 'File::pushd';
     requires 'File::Temp';
     requires 'File::Which';
     requires 'Test::More', '0.98';
+    requires 'Perl::Lint', '0.11';
 };
 

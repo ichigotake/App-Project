@@ -110,7 +110,11 @@ ichigotake E<lt>ichigotake.san@gmail.comE<gt>
 
 =head1 SEE ALSO
 
-=item1 L<Minilla>
+=over
+
+=item * L<Minilla>
+
+=back
 
 =cut
 

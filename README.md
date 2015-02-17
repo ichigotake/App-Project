@@ -17,7 +17,7 @@ App::Project - \[DRAFT\] Generic authoring tool(not only for perl project).
 
 I'm going to implements this modules.
 
-And thinking about this name because [App::Project](http://search.cpan.org/perldoc?App::Project) naming is uncool name :(
+And thinking about this name because [App::Project](https://metacpan.org/pod/App::Project) naming is uncool name :(
 
 # DESCRIPTION
 
@@ -27,7 +27,7 @@ App::Project is not only for Perl project.
 
 App::Project inspire of Minilla(as CPAN module auhtoring tool).
 
-__THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE__.
+**THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE**.
 
 # GETTING STARTED
 
@@ -55,7 +55,7 @@ It's that easy.
 
 I need generic authoring tool. (e.g. Android application, HTML5 application, and other)
 
-I was impressed [Minilla](http://search.cpan.org/perldoc?Minilla). And I decide make this project.
+I was impressed [Minilla](https://metacpan.org/pod/Minilla). And I decide make this project.
 
 ## Why Perl?
 
@@ -82,4 +82,4 @@ ichigotake <ichigotake.san@gmail.com>
 
 # SEE ALSO
 
-- [Minilla](http://search.cpan.org/perldoc?Minilla)
+- [Minilla](https://metacpan.org/pod/Minilla)

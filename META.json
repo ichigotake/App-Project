@@ -4,7 +4,7 @@
       "ichigotake <ichigotake.san@gmail.com>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Minilla/v2.3.0, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "Minilla/v2.3.0, CPAN::Meta::Converter version 2.143240",
    "license" : [
       "perl_5"
    ],
@@ -58,6 +58,8 @@
             "File::Temp" : "0",
             "File::Which" : "0",
             "File::pushd" : "0",
+            "Parse::CPAN::Meta" : "1.4414",
+            "Perl::Lint" : "0.11",
             "Test::More" : "0.98"
          }
       }

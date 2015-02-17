@@ -9,4 +9,5 @@ perl:
 before_script:
   - git config --global user.name "nanash"
   - ./author/test-fatpacked-script.sh
+  - perl xt/lint.t
 
