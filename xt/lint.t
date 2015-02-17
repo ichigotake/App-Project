@@ -25,5 +25,5 @@ my $linter = Perl::Lint->new;
 my $viotasions = $linter->lint($targets);
 
 use Data::Dumper;
-print Dumper($viotasions);
+warn Dumper($viotasions);
 
