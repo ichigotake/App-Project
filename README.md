@@ -33,7 +33,8 @@ __THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE__.
 
     # First time only
     # TODO: Provide fat pack tool
-    % cpanm App::Project
+    % curl -L http://tinyurl.com/p5-app-project > bin/project
+    % wget http://tinyurl.com/p5-app-project 
     # App::Project has only a few deps. It should be very quick
     # Make a new distribution
     % cd /path/to/App/
@@ -43,12 +44,8 @@ __THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE__.
     # Hack your code!
     % $EDITOR lib/YourCode
     # Done? Test and release it!
-    # Make L<git tag> and update change log for release
+    # Make L<git tag && git push> and update change log for release
     % project release
-    # Need more portability tool? We provide to generate L<>
-    % project script > bin/project
-
-
 
 It's that easy.
 
