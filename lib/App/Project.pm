@@ -39,7 +39,7 @@ App::Project - [DRAFT] Generic authoring tool(not only for perl project).
     project migrate      - (not yet) Set up your project ready for this tool
     project release      - Make release tag and push
     project bump_version - Bump version for next release
-    project wrapper      - (not yet) Output raw script source to stdout
+    project script       - (not yet) Output raw script source to stdout
 
 =head1 THIS IS DRAFT
 
@@ -74,7 +74,7 @@ B<THIS IS A DEVELOPMENT RELEASE. API MAY CHANGE WITHOUT NOTICE>.
     # Make L<git tag> and update change log for release
     % project release
     # Need more portability tool? We provide to generate L<>
-    % project wrapper > bin/project
+    % project script > bin/project
 
 
 It's that easy.
