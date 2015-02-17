@@ -8,6 +8,5 @@ perl:
   - "5.20"
 before_script:
   - git config --global user.name "nanash"
-  # test fat-packed script
   - ./author/test-fatpacked-script.sh
 
