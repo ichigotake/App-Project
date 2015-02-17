@@ -14,8 +14,8 @@ sub run {
     my $version = shift(@args) or die 'Must specifies version name!';
     my $dry_run;
     my $res = GetOptions("dry-run!" => \$dry_run);
-    if ($dru_run) {
-        infof("DRY-RUN.  Would have tagged version $ver.\n");
+    if ($dry_run) {
+        infof("DRY-RUN.  Would have tagged version $version.\n");
         return;
     }
     my $project = App::Project->new(version => $version);
